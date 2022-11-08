@@ -10,20 +10,22 @@ const Home = () => {
         <h1 className='mensaje'>Crea tus intercambios secretos para Navidad</h1>
       </div>
       <div className='imgContainer'>
-        <img
-          className='img'
-          alt='gift image'
-          src='/public/Two_hands_with_gift.png'
-        />
+        <img className='img' alt='gift image' src='/Two_hands_with_gift.png' />
       </div>
       <div className='btn-box'>
         <button className='btn-crear'>Comenzar</button>
       </div>
       <div className='div-flake'>
-        <img className='img-flake' src='/public/snowflake.png' />
+        <img className='img-flake' src='/snowflake.png' />
       </div>
       <div className='div-flake-2'>
-        <img className='img-flake' src='/public/snowflake.png' />
+        <img className='img-flake' src='/snowflake.png' />
+      </div>
+      <div className='div-ball'>
+        <img className='img-ball' src='/christmas_ball.png' />
+      </div>
+      <div className='div-leaf'>
+        <img className='img-leaf' src='/leaf_angle.png' />
       </div>
     </PageContent>
   )

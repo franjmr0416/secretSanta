@@ -7,25 +7,15 @@
   color: #ebebeb;
 }
 .img {
-  width: 80%;
+  width: 60%;
 }
 .imgContainer {
   z-index: 2;
   position: absolute;
+  top: 52%;
   left: 30%;
-  top: 40%;
-  animation-duration: 5s;
-  animation-name: upDown;
-  animation-iteration-count: infinite;
-  animation-direction: alternate;
-}
-@keyframes upDown {
-  from {
-    transform: translateY(20px);
-  }
-  to {
-    transform: translateY(-20px);
-  }
+  -webkit-animation: slide-top 5s ease-in-out infinite alternate;
+  animation: slide-top 5s ease-in-out infinite alternate;
 }
 .btn-box {
   position: absolute;
@@ -58,6 +48,49 @@
   width: 40px;
   animation: 9s rotacion linear infinite;
 }
+.div-ball {
+  position: absolute;
+  left: 12%;
+  top: 40%;
+}
+.img-ball {
+  width: 50px;
+  animation: softRotacion 5s linear infinite alternate;
+}
+.div-leaf {
+  position: absolute;
+  right: 12%;
+  top: 10%;
+}
+.img-leaf {
+  width: 70px;
+  animation: softRotacion 7s linear infinite alternate;
+}
+.slide-top {
+  -webkit-animation: slide-top 5s ease-in-out infinite alternate;
+  animation: slide-top 5s ease-in-out infinite alternate;
+}
+@-webkit-keyframes slide-top {
+  0% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+  100% {
+    -webkit-transform: translateY(-80px);
+    transform: translateY(-80px);
+  }
+}
+@keyframes slide-top {
+  0% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+  100% {
+    -webkit-transform: translateY(-80px);
+    transform: translateY(-80px);
+  }
+}
+
 @keyframes rotacion {
   from {
     transform: rotate(0deg);
@@ -66,7 +99,14 @@
     transform: rotate(360deg);
   }
 }
-
+@keyframes softRotacion {
+  from {
+    transform: rotate(-20deg);
+  }
+  to {
+    transform: rotate(20deg);
+  }
+}
 @media only screen and (min-width: 769px) {
   .box-mensaje {
     max-width: 80%;
@@ -78,15 +118,21 @@
     width: 30%;
   }
   .imgContainer {
-    left: 45%;
-    top: 35%;
+    left: 43%;
+    top: 45%;
   }
-  @keyframes upDown {
-    from {
-      top: 35%;
-    }
-    to {
-      top: 40%;
-    }
+  .div-ball {
+    left: 12%;
+    top: 50%;
+  }
+  .img-ball {
+    width: 80px;
+  }
+  .div-leaf {
+    right: 15%;
+    top: 10%;
+  }
+  .img-leaf {
+    width: 120px;
   }
 }
