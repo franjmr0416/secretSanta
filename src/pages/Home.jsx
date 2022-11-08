@@ -16,6 +16,9 @@ const Home = () => {
           src='/public/Two_hands_with_gift.png'
         />
       </div>
+      <div className='btn-box'>
+        <button className='btn-crear'>Comenzar</button>
+      </div>
     </PageContent>
   )
 }
