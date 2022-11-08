@@ -1,7 +1,11 @@
+import './Title.css'
+import { FaGift } from 'react-icons/fa'
+
 const Title = () => {
   return (
-    <div>
-      <span>Secret Santa</span>
+    <div className='box'>
+      <FaGift className='icon' />
+      <span className='title'>Secret Santa</span>
     </div>
   )
 }

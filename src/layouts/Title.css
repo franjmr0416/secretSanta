@@ -1,0 +1,14 @@
+.box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+}
+.title {
+  font-size: x-large;
+  font-family: 'Yeseva One', cursive;
+  padding-left: 0.5rem;
+}
+.icon {
+  font-size: x-large;
+}
