@@ -22,6 +22,9 @@ const Home = () => {
       <div className='div-flake'>
         <img className='img-flake' src='/public/snowflake.png' />
       </div>
+      <div className='div-flake-2'>
+        <img className='img-flake' src='/public/snowflake.png' />
+      </div>
     </PageContent>
   )
 }
