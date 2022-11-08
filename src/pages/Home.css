@@ -1,0 +1,52 @@
+.box-mensaje {
+  text-align: center;
+}
+.mensaje {
+  font-family: 'Yeseva One', cursive;
+  font-size: 40px;
+  color: #ebebeb;
+}
+.img {
+  width: 80%;
+}
+.imgContainer {
+  z-index: 2;
+  position: absolute;
+  left: 30%;
+  top: 40%;
+  animation-duration: 5s;
+  animation-name: upDown;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+@keyframes upDown {
+  from {
+    top: 40%;
+  }
+  to {
+    top: 45%;
+  }
+}
+@media only screen and (min-width: 769px) {
+  .box-mensaje {
+    max-width: 80%;
+  }
+  .mensaje {
+    font-size: 128px;
+  }
+  .img {
+    width: 30%;
+  }
+  .imgContainer {
+    left: 45%;
+    top: 35%;
+  }
+  @keyframes upDown {
+    from {
+      top: 35%;
+    }
+    to {
+      top: 40%;
+    }
+  }
+}
