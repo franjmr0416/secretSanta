@@ -8,7 +8,9 @@
   font-size: x-large;
   font-family: 'Yeseva One', cursive;
   padding-left: 0.5rem;
+  text-shadow: 2px 2px 8px #343a40;
 }
 .icon {
   font-size: x-large;
+  color: #f3bb60;
 }
