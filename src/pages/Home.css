@@ -21,10 +21,10 @@
 }
 @keyframes upDown {
   from {
-    top: 40%;
+    transform: translateY(20px);
   }
   to {
-    top: 45%;
+    transform: translateY(-20px);
   }
 }
 .btn-box {
@@ -44,6 +44,24 @@
 .btn-crear:hover {
   background-color: #b52a2d;
 }
+.div-flake {
+  position: absolute;
+  top: 10%;
+  left: 10%;
+}
+.img-flake {
+  width: 40px;
+  animation: 9s rotacion linear infinite;
+}
+@keyframes rotacion {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
 @media only screen and (min-width: 769px) {
   .box-mensaje {
     max-width: 80%;

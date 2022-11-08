@@ -19,6 +19,9 @@ const Home = () => {
       <div className='btn-box'>
         <button className='btn-crear'>Comenzar</button>
       </div>
+      <div className='div-flake'>
+        <img className='img-flake' src='/public/snowflake.png' />
+      </div>
     </PageContent>
   )
 }
