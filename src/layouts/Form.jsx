@@ -5,8 +5,14 @@ import { useState } from 'react'
 import FormParticipante from '../components/FormParticipante'
 
 const Form = () => {
-  const [participantes, setParticipantes] = useState([])
-  const handleEvent = (event) => {}
+  const initialParticipantes = [{ nombre: '', email: '' }]
+  const [participantes, setParticipantes] = useState(initialParticipantes)
+  const addParticipante = () => {
+    setParticipantes((participantes) => [
+      ...participantes,
+      { nombre: '', email: '' },
+    ])
+  }
 
   return (
     <div className='form-content'>
@@ -52,10 +58,12 @@ const Form = () => {
           <div className='section'>
             <div className='flex content-between'>
               <span className='section-title'>Participantes</span>
-              <Btn action={'add'} text={'Nuevo'} />
+              <Btn action={'add'} text={'Nuevo'} onClick={addParticipante} />
             </div>
             <div>
-              <FormParticipante />
+              {participantes.map((x) => {
+                return <FormParticipante />
+              })}
             </div>
           </div>
           <div className='flex content-center section '>
