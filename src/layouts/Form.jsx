@@ -1,15 +1,21 @@
 import FormControl from '../components/FormControl'
 import Btn from '../components/Btn'
+import './Form.css'
+import { useState } from 'react'
+import FormParticipante from '../components/FormParticipante'
 
 const Form = () => {
+  const [participantes, setParticipantes] = useState([])
+  const handleEvent = (event) => {}
+
   return (
-    <div>
+    <div className='form-content'>
       <h2>Registra tus amigos</h2>
       <div>
         <form>
           <div>
-            <span>Información de tu fiesta</span>
-            <div>
+            <span className='section-title'>Información de tu fiesta</span>
+            <div className='grid-3 mt-05'>
               <FormControl type={'date'} label={'Fecha'} name={'fecha'} />
               <FormControl
                 type={'text'}
@@ -25,9 +31,9 @@ const Form = () => {
               />
             </div>
           </div>
-          <div>
-            <span>Datos organizador</span>
-            <div>
+          <div className='section'>
+            <span className='section-title'>Datos organizador</span>
+            <div className='grid-2 mt-05'>
               <FormControl
                 type={'text'}
                 name={'nombre_organizador'}
@@ -43,28 +49,20 @@ const Form = () => {
             </div>
             <span>El organizador tambien es considerado un participante</span>
           </div>
-          <div>
-            <div>
-              <span>Participantes</span>
+          <div className='section'>
+            <div className='flex content-between'>
+              <span className='section-title'>Participantes</span>
               <Btn action={'add'} text={'Nuevo'} />
             </div>
             <div>
-              <FormControl
-                type={'text'}
-                name={''}
-                label={'Nombre'}
-                placeholder={'Santa'}
-              />
-              <FormControl
-                type={'email'}
-                name={''}
-                label={'Email'}
-                placeholder={'ejemplo@correo.com'}
-              />
-              <Btn action={'delete'} text={'Eliminar'} />
+              <FormParticipante />
             </div>
           </div>
-          <button type='submit'>Crear</button>
+          <div className='flex content-center section '>
+            <button className='btn-submit' type='submit'>
+              Crear
+            </button>
+          </div>
         </form>
       </div>
     </div>

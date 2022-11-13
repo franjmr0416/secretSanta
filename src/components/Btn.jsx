@@ -1,3 +1,6 @@
+import { FaPlus } from 'react-icons/fa'
+import './Btn.css'
+
 const Btn = (props) => {
   const { text, action } = props
   return (

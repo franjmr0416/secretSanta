@@ -1,0 +1,73 @@
+.flex {
+  display: flex;
+  align-items: center;
+}
+.content-between {
+  justify-content: space-between;
+}
+.content-center {
+  justify-content: center;
+}
+.section-title {
+  font-weight: 600;
+}
+.section {
+  margin-top: 1rem;
+}
+h2 {
+  font-family: 'Yeseva One', cursive;
+  font-size: x-large;
+}
+.grid-3 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 1fr;
+  grid-column-gap: 20px;
+}
+.grid-2 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: 1fr;
+  grid-column-gap: 20px;
+}
+.mt-05 {
+  margin-top: 0.5rem;
+}
+.participante {
+  display: flex;
+  justify-content: space-between;
+}
+.btn-submit {
+  color: white;
+  background-color: #c6984e;
+  border: none;
+  font-size: 1.25em;
+  padding: 0.5em 3em;
+  border-radius: 10em;
+  cursor: pointer;
+  box-shadow: 1px 1px 3px 1px rgba(105, 101, 101, 0.74);
+}
+.btn-submit:hover {
+  background-color: #a37c3e;
+}
+@media only screen and (max-width: 425px) {
+  .grid-3 {
+    grid-template-columns: repeat(1, 100%);
+    row-gap: 10px;
+  }
+  .grid-2 {
+    grid-template-columns: repeat(1, 100%);
+    row-gap: 10px;
+  }
+  .participante {
+    display: grid;
+    grid-template-columns: repeat(1, 100%);
+    row-gap: 10px;
+  }
+}
+.form-content {
+  padding: 1rem 2rem;
+  background-color: #ebebeb;
+  border-radius: 16px;
+  box-shadow: 2px 2px 7px 1px rgba(105, 101, 101, 0.74);
+}
