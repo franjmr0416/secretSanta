@@ -4,14 +4,21 @@ import './Form.css'
 import { useState } from 'react'
 import FormParticipante from '../components/FormParticipante'
 
+let initId = 0
+
 const Form = () => {
-  const initialParticipantes = [{ nombre: '', email: '' }]
+  const initialParticipantes = [{ id: initId, nombre: '', email: '' }]
   const [participantes, setParticipantes] = useState(initialParticipantes)
+
   const addParticipante = () => {
+    initId++
     setParticipantes((participantes) => [
       ...participantes,
-      { nombre: '', email: '' },
+      { id: initId, nombre: '', email: '' },
     ])
+  }
+  const deleteParticipante = (id) => {
+    setParticipantes(participantes.filter((x) => x.id !== id))
   }
 
   return (
@@ -62,7 +69,12 @@ const Form = () => {
             </div>
             <div>
               {participantes.map((x) => {
-                return <FormParticipante />
+                return (
+                  <FormParticipante
+                    key={x.id}
+                    onDelete={() => deleteParticipante(x.id)}
+                  />
+                )
               })}
             </div>
           </div>

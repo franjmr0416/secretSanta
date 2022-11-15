@@ -2,6 +2,7 @@ import FormControl from './FormControl'
 import Btn from './Btn'
 
 const FormParticipante = (props) => {
+  const { onDelete } = props
   return (
     <div className='participante'>
       <div className='grid-2 mt-05'>
@@ -19,7 +20,7 @@ const FormParticipante = (props) => {
         />
       </div>
 
-      <Btn action={'delete'} text={'Eliminar'} />
+      <Btn action={'delete'} text={'Eliminar'} onClick={onDelete} />
     </div>
   )
 }
